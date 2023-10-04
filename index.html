@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/download.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Thanmay Gowda B.J</span><br> Scroll down to explore</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about----------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/my1.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hey there! I'm THANMAY GOWDA B.J, and I'm just starting my journey as a first-year student pursuing a Bachelor's in Computer Science and Engineering (CSE) at VIT. Here's a little something about me:<br>
+                    <ul>
+                        <li>Academic Enthusiast:
+                            I've always been passionate about technology and computers, which is why I chose CSE.
+                            Excited to dive deep into programming languages, algorithms, and all things tech.
+                            </li>
+                                <li>Proficient in languages Python.
+                                    Already started working on small personal coding projects and eager to learn more.
+                                    Hackathon Enthusiast:
+                                    
+                                    I love hackathons; the thrill of creating something innovative in a limited time is amazing.
+                                    Looking forward to participating in hackathons on campus.
+                                    
+                                    
+                                </li>
+                                    <li>Dreaming of working for a tech giant like Google or Microsoft someday.
+                                        
+                                    </li>
+                                    
+                                        <li>Interested in AI, cybersecurity, and app/web development; open to exploring different career paths within CSE.
+
+                                        </li>
+                                            <li>Can solve a Rubik's Cube in under 2 minutes!
+
+                                            </li>
+
+                
+                    </ul>
+                    
+                    
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab"id="Skills">
+                    <ul>
+                        <li><span>Python </span></li>
+                        <li><span>Python Course from GUVI certification link: https://guvi-zc1.maillist-manage.in/click/15d2095ddaa53c2/15d2095ddaa4348</span></li>
+                        <li><span>Matlab</span></li>
+                        <li><span>Computer Application</span></li>
+                        <li><span>MS Office</span></li>
+                        <li><span>Problem solving</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2023- Current</span><br> VIT AP B.tech CSE</li>
+                        <li><span>2023</span><BR>12th From Sri Chaitanya PCMB</li>
+                        <li><span>2021</span><br>10th From Kendriya Vidyalaya</li>
+                        <li><span>2010-2018</span><BR>Air Force School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }    
+</script>
+</body>
+</html>
